@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "nombre": "Camiseta deportiva Nike",
+    "categoria": "Ropa",
+    "precio": 89.90,
+    "stock": 25,
+    "descripcion": "Camiseta ligera y transpirable ideal para entrenamientos o uso diario."
+    
+  },
+  {
+    "id": 2,
+    "nombre": "Auriculares Bluetooth JBL",
+    "categoria": "Tecnología",
+    "precio": 159.00,
+    "stock": 12,
+    "descripcion": "Auriculares inalámbricos con sonido potente y cancelación de ruido."
+   
+  },
+  {
+    "id": 3,
+    "nombre": "Silla ergonómica de oficina",
+    "categoria": "Hogar",
+    "precio": 299.99,
+    "stock": 8,
+    "descripcion": "Silla ergonómica con soporte lumbar ajustable y asiento acolchado."
+   
+  },
+  {
+    "id": 4,
+    "nombre": "Laptop Lenovo IdeaPad 3",
+    "categoria": "Tecnología",
+    "precio": 2299.00,
+    "stock": 5,
+    "descripcion": "Laptop de 15.6'' con procesador Intel i5, 8GB de RAM y SSD de 512GB."
+   
+  },
+  {
+    "id": 5,
+    "nombre": "Zapatillas Adidas Ultraboost",
+    "categoria": "Calzado",
+    "precio": 449.00,
+    "stock": 18,
+    "descripcion": "Zapatillas cómodas con excelente amortiguación para correr o caminar."
+   
+  },
+  {
+    "id": 6,
+    "nombre": "Cafetera Dolce Gusto Mini Me",
+    "categoria": "Electrodomésticos",
+    "precio": 379.90,
+    "stock": 10,
+    "descripcion": "Cafetera automática para cápsulas, diseño compacto y moderno."
+  
+  },
+  {
+    "id": 7,
+    "nombre": "Gorra New Era Classic",
+    "categoria": "Accesorios",
+    "precio": 69.90,
+    "stock": 40,
+    "descripcion": "Gorra ajustable de algodón con diseño clásico y logo bordado."
+   
+  },
+  {
+    "id": 8,
+    "nombre": "Smartwatch Amazfit Bip 3",
+    "categoria": "Tecnología",
+    "precio": 249.00,
+    "stock": 14,
+    "descripcion": "Reloj inteligente con monitor de ritmo cardíaco y batería de larga duración."
+    
+  },
+  {
+    "id": 9,
+    "nombre": "Set de ollas de acero inoxidable",
+    "categoria": "Hogar",
+    "precio": 189.00,
+    "stock": 9,
+    "descripcion": "Juego de 5 ollas con tapas de vidrio templado y asas ergonómicas."
+   
+  },
+  {
+    "id": 10,
+    "nombre": "Chocolate artesanal 70% cacao",
+    "categoria": "Alimentos",
+    "precio": 15.50,
+    "stock": 60,
+    "descripcion": "Tableta de chocolate oscuro hecho con cacao orgánico de origen peruano."
+    
+  }
+]
