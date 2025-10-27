@@ -31,7 +31,7 @@ const Sidebar = () => {
     {
       name: "Reportes",
       icon: <BiSolidReport />,
-      path: "/reportes",
+      path: "/reportes/ventas",
     },
     {
       name: "Productos",

@@ -1,13 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SimpleTable from "../../../components/SimpleTable";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { TaskingColumn } from "../../../components/columns/TaskingColumn";
-import data from "../../../MOCK_DATA.json";
+
 import { Link } from "react-router-dom";
+import { deletePetition, getPetition } from "../../../resources/ApiFunction";
 
 export default function Proveedores() {
   const [filtering, setFiltering] = useState("");
+  const [data, setData] = useState([]);
+  const loadProducts = () => {
+    getPetition("proveedor/all", setData);
+  };
+  useEffect(() => {
+    loadProducts();
+  }, []);
+  console.log(data);
+  const handleDeleteProduct = async (id) => {
+    try {
+      await deletePetition(`proveedor/delete/${id}`, (response) => {
+        console.log("Proveedor eliminado exitosamente:", response);
+      }).then(() => {
+        loadProducts();
+      });
+    } catch (error) {
+      console.error("Error al eliminar proveedor:", error);
+      alert("Error al eliminar el proveedor. Inténtalo de nuevo.");
+    }
+  };
   return (
     <>
       <div className="bg-white py-16 flex flex-col ">
@@ -31,7 +52,11 @@ export default function Proveedores() {
       <SimpleTable
         filtering={filtering}
         setFiltering={setFiltering}
-        columns={TaskingColumn({ data })}
+        columns={TaskingColumn({
+          data,
+          onDelete: handleDeleteProduct,
+          editPath: "/inventario/proveedores/editar",
+        })}
         data={data}
       />
     </>

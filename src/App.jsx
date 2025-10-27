@@ -6,17 +6,20 @@ import Proveedores from "./pages/inventario/proveedores/Proveedores";
 import EditarProveedor from "./pages/inventario/proveedores/EditarProveedor";
 import AgregarProveedor from "./pages/inventario/proveedores/AgregarProveedor";
 import Usuarios from "./pages/usuarios/Usuarios";
+import ReporteVenta from "./pages/reportes/ReporteVenta";
 import AgregarUsuario from "./pages/usuarios/AgregarUsuario";
 import EditarUsuario from "./pages/usuarios/EditarUsuario";
 import Ventas from "./pages/ventas/Ventas";
 import Login from "./pages/login/Login";
 import UserProvider from "./context/UserContext";
-import Reportes from "./pages/reportes/Reportes";
 import Movimientos from "./pages/inventario/movimientos/Movimientos";
 import Inventario from "./pages/inventario/Inventario";
 import AgregarProducto from "./pages/productos/AgregarProducto";
 import EditarProducto from "./pages/productos/EditarProducto";
 import AgregarMovimiento from "./pages/inventario/movimientos/AgregarMovimiento";
+import Pago from "./pages/ventas/Pago";
+import ReporteProducto from "./pages/reportes/ReporteProducto";
+import Reportes from "./pages/reportes/Reportes";
 
 function App() {
   return (
@@ -39,7 +42,7 @@ function App() {
                     element={<AgregarProducto />}
                   />
                   <Route
-                    path="/productos/editar"
+                    path="/productos/editar/:id"
                     element={<EditarProducto />}
                   />
 
@@ -48,7 +51,10 @@ function App() {
                     path="/usuarios/agregar"
                     element={<AgregarUsuario />}
                   />
-                  <Route path="/usuarios/editar" element={<EditarUsuario />} />
+                  <Route
+                    path="/usuarios/editar/:id"
+                    element={<EditarUsuario />}
+                  />
                   <Route path="/inventario" element={<Inventario />} />
                   <Route
                     path="/inventario/movimientos"
@@ -67,11 +73,17 @@ function App() {
                     element={<AgregarProveedor />}
                   />
                   <Route
-                    path="/inventario/proveedores/editar"
+                    path="/inventario/proveedores/editar/:id"
                     element={<EditarProveedor />}
                   />
-                  <Route path="/reportes" element={<Reportes />} />
+
+                  <Route path="/reportes" element={<Reportes />}>
+                    <Route path="ventas" element={<ReporteVenta />} />
+                    <Route path="productos" element={<ReporteProducto />} />
+                  </Route>
+
                   <Route path="/ventas" element={<Ventas />} />
+                  <Route path="/pago" element={<Pago />} />
                 </Route>
               </Routes>
             </UserProvider>

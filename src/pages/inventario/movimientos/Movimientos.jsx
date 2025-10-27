@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SimpleTable from "../../../components/SimpleTable";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import data from "../../../MOCK_DATA.json";
 import { Link } from "react-router-dom";
 import { SingleColumn } from "../../../components/columns/SingleColumn";
+import { getPetition } from "../../../resources/ApiFunction";
 
 export default function Movimientos() {
   const [filtering, setFiltering] = useState("");
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    getPetition("movimiento/all-dto", setData);
+  }, []);
+  console.log(data);
   return (
     <>
       <div className="bg-white py-16 flex flex-col ">

@@ -1,0 +1,1 @@
+export const SERVICEURL = "localhost:9193/tienda"
